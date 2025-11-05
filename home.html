@@ -7,36 +7,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/base.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
     <title>Universal Android Debloater</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="header-list">
                 <li><a href="/">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="download.html">Download</a></li>
             </ul>
         </nav>
-        <h1>Universal Android Debloater</h1>
-        <h3>A tool that allows you to control your smartphone.</h3>
+        <div class="header-title">
+            <h1 class="title">Universal Android Debloater</h1>
+            <h5 class="subtitle">A tool that allows you to control your smartphone.</h5>
+        </div>
+        <div class="header-button">
+            <div class="button download">
+                <a href="download.html">Download</a>
+            </div>
+            <div class="button github">
+                <a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation">View on GitHub</a>
+            </div>
+        </div>
     </header>
-        
     <main>
-        <section>
-            <div><a href="download.html">Download</a></div>
-            <div><a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation">View on GitHub</a></div>
-        </section>
-        <section>
-            <h2>Why UAD?</h2>
-            <div>
-                <div>
-                    <h3>Privacy</h3>
+        <section class="why-uad">
+            <h4>Why UAD?</h4>
+            <div class="reason-container">
+                <div class="reason">
+                    <h5>Privacy</h5>
                     <p>Allows you to remove apps that hold permissions about your device.</p>
                 </div>
-                <div>
-                    <h3>Security</h3>
+                <div class="reason">
+                    <h5>Security</h5>
                     <p>Some apps can have security problems and you won't be able to remove it without UAD.</p>   
+                </div>
+                <div class="reason">
+                    <h5>Community</h5>
+                    <p>Thousands of packages documented by contributors. Here you can see what's safe to remove from your phone!</p>   
+                </div>
+                <div class="reason">
+                    <h5>Acessibility</h5>
+                    <p>The simple UI makes it easier and more convinient to use than other tools.</p>   
                 </div>
             </div>
         </section>
