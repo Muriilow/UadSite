@@ -1,14 +1,18 @@
 html {
-    background-color: #1E201E;
-    color: #F5F5F0;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: #222126;
+    color: #ECDFCC;
 }
-
-body {
-    max-width: 80%;
+h1 {
+    font-family: "Alfa Slab One", serif;
+}
+main {
+    max-width: 50%;
     margin: 0 auto;
 }
 
 .header-list {
+    border-bottom: 1px solid #44444E;
     display: flex;
     justify-content: flex-end;
     margin: 1rem 3rem;
@@ -16,6 +20,7 @@ body {
 
 .header-list li {
     padding: 1rem; 
+    font-weight: 700;
 }
 
 .header-title {
@@ -25,7 +30,7 @@ body {
     justify-content: center;
 }
 .title {
-    color: #697565;
+    color: #8f413c;
     margin: 3rem 0;
 }
 
@@ -44,31 +49,47 @@ body {
     align-items: center;
     justify-content: center;
     padding: 1.2rem 2.4rem;
-    border: 2px solid;
     border-radius: 1rem;
     font-weight: 600;
     font-size: 1.6rem;
     text-decoration: none;
     transition: all 0.3s ease;
     gap: 0.8rem;
-    margin: 6rem 4rem;
+    margin: 6rem 3rem;
 }
 .button:hover {
     text-decoration: none;
-    transform: translateY(-0.25rem);
+    transform: translateY(-0.5rem);
 }
 
+.what-uad {
+    margin: 8rem 0;
+    text-align: center;
+}
+
+.what-uad a {
+    text-decoration: underline;
+}
 .download {
-    color: #697565;
+    background-color: #4e425c;
+    border: none;
 }
 
 .github {
-    color: #ECDFCC;
+    border: 1px solid #44444E;
 }
 
+.why-uad {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-uad h3 {
+    margin: 3rem auto;
+}
 .reason-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
     gap: 2rem;
     place-items: center;
 }
@@ -83,10 +104,25 @@ body {
     padding: 1rem 0;
     overflow: hidden;
     min-height: 25rem;
-    border: 2px solid;
-    border-radius: 3%;
+    background-color: #2e2d34;
+    border-radius: 1.5rem;
 }
 
 .reason p {
     text-align: center;
+}
+
+.questions {
+    margin: 8rem 0;
+    text-align: center;
+}
+.questions a {
+    text-decoration: underline;
+}
+
+footer {
+    color: #878796;
+    border-top: 1px solid #44444E;
+    margin: 1rem 3rem;
+    padding: 2rem 0;
 }
