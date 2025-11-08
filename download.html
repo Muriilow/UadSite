@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/base.css" />
+        <link rel="stylesheet" type="text/css" href="css/download.css" />
+        <title>Universal Android Debloater</title>
+    </head>
+    <body>
+    <header>
+        <nav>
+            <ul class="header-list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="download.html">Download</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        
+    <h2>Installation Guide</h2>
+
+    <div class="note">
+        <p><strong>Important Prerequisites:</strong></p>
+        <ul>
+            <li><strong>Read the <a href="FAQ">FAQ</a></strong> before proceeding.</li>
+            <li><strong>Backup your data</strong> - You can never be too careful!</li>
+            <li>Remove OEM accounts from your Android device's Settings app before debloating.</li>
+        </ul>
+    </div>
+
+    <h3>Step 1: Install ADB</h3>
+    <p>ADB (Android Debug Bridge) is required for UAD-ng to communicate with your Android device. Choose your operating system:</p>
+
+    <div class="platform-section">
+        <h4>Windows</h4>
+        <div class="step">
+            <p><strong>Method 1: Using Winget (Recommended)</strong></p>
+            <ol>
+                <li>Install <a href="/microsoft/winget-cli">WinGet</a> if not already available</li>
+                <li>Open PowerShell as Administrator</li>
+                <li>Run the following command:
+                    <pre><code>winget install --id Google.PlatformTools</code></pre>
+                </li>
+                <li><a href="https://developer.android.com/studio/run/oem-usb#Drivers">Install USB drivers for your device</a> if needed</li>
+            </ol>
+        </div>
+        <div class="step">
+            <p><strong>Method 2: Manual Installation</strong></p>
+            <ol>
+                <li><a href="https://developer.android.com/tools/releases/platform-tools#downloads">Download Platform Tools</a></li>
+                <li>Extract the files and either:
+                    <ul>
+                        <li>Add the directory to your <code>PATH</code> environment variable, or</li>
+                        <li>Place UAD-ng in the same directory.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="platform-section">
+        <h4>Linux</h4>
+        <p>Install Android Platform Tools using your distribution's package manager:</p>
+        <ul>
+            <li><strong>Ubuntu/Debian:</strong>
+                <pre><code>sudo apt install android-tools-adb android-tools-fastboot</code></pre>
+            </li>
+            <li><strong>Arch Linux:</strong>
+                <pre><code>sudo pacman -S android-tools</code></pre>
+            </li>
+            <li><strong>Fedora:</strong>
+                <pre><code>sudo dnf -y install android-tools</code></pre>
+            </li>
+        </ul>
+        <p>Alternatively, install either <a href="https://repology.org/project/android-tools/packages">android-tools</a> or <a href="https://repology.org/project/adb/packages">adb</a> package.</p>
+    </div>
+
+    <div class="platform-section">
+        <h4>macOS</h4>
+        <ol>
+            <li><a href="https://brew.sh/">Install Homebrew</a> if not already installed</li>
+            <li>Open Terminal and run:
+                <pre><code>brew install android-platform-tools.</code></pre>
+            </li>
+        </ol>
+    </div>
+
+    <h3>Step 2: Download UAD-ng</h3>
+    <p>With ADB installed we can now download UAD-ng, the program that we are going to actually use.</p>
+    <div class="platform-section">    
+        <p><a href="https://github.com/Universal-Debloater-Alliance/universal-android-debloater/releases/latest">Download the latest release of UAD-ng here</a></p>
+    </div>
+
+    <h3>Step 3: Enable USB Debugging on Your Android Device</h3>
+    <p>Now, ADB needs the USB Debug option to be enabled. This option is at the Developer options in your settings app.</p>
+    <div class="platform-section">
+        <h4>Wired Connection</h4>
+        <ol>
+            <li>Enable Developer Options in your device.</li>
+            <li>Enable USB Debug option.</li>
+            <div class="alert alert-tip">
+                <h5>Tip</h5>
+                It usually requires you to tap seven times at the <strong>Builder Number</strong> under <strong>About Phone</strong>.
+            </div>
+        </ol>
+        <br>
+        <h4>Wireless Connection (Optional)</h4>
+        <p>Alternatively, connect wirelessly using ADB commands:</p>
+        <ul>
+            <li><a href="https://developer.android.com/tools/adb#wireless-android11-command-line">Android 11 or later</a></li>
+            <li><a href="https://developer.android.com/tools/adb#wireless">Android 10 or older</a></li>
+        </ul>
+    </div>
+    <div class="conclusion">
+        <h3>Conclusion</h3>
+        <p>Now you finally have UAD-ng working in your computer, we recommend you to <strong>read the <a href="Usage">usage manual</a></strong> before running UAD-ng.</p>
+        
+        <div class="alert alert-tip">
+            <h4>Additional Notes</h4>
+            <div class="note">
+                <ul>
+                    <li><strong>Linux & macOS Users:</strong> If UAD-ng doesn't run, ensure execution permissions:
+                        <pre><code>chmod +x uad-ng-*</code></pre>
+                    </li>
+                    <li><strong>Chinese Phone Users:</strong> Use the AOSP list instead of "OEM" to remove stock apps, as manufacturers like Xiaomi and Huawei often use AOSP package IDs for their modified apps.</li>
+                    <li><strong>System Updates:</strong> Run UAD-ng after installing OEM system updates, as some uninstalled apps may be reinstalled.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </main>
+    <footer>
+        <p>Release under the GPL-3.0 License</p>
+        <p>© 2025 by Universal Debloater Alliance</p>
+    </footer>
+    </body>
+</html>
