@@ -1,0 +1,17 @@
+h2, h3 {
+    margin-top: 6rem;
+}
+.platform-section {
+    padding: 2rem;
+    border-left: 0.25rem solid #44444E;
+    color: #c7c6cd;
+}
+
+.step {
+    margin-bottom: 2rem;
+}
+
+.conclusion {
+    border-top: 0.15rem solid #44444E;
+    margin: 4rem 0;
+}
